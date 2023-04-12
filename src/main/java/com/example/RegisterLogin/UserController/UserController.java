@@ -1,6 +1,6 @@
 package com.example.RegisterLogin.UserController;
 
-import com.example.RegisterLogin.response.loginResponse;
+import com.example.RegisterLogin.response.LoginResponse;
 import com.example.RegisterLogin.Dto.LoginDTO;
 import com.example.RegisterLogin.Dto.UserDTO;
 import com.example.RegisterLogin.Service.UserService;
@@ -31,8 +31,8 @@ public class UserController {
     @PostMapping(path = "/login")
     public ResponseEntity<?> loginUser(@RequestBody LoginDTO loginDTO)
     {
-        loginResponse loginResponse = userService.loginUser(loginDTO);
-        return ResponseEntity.ok(loginMessage);
+        LoginResponse loginResponse = userService.loginUser(loginDTO);
+        return ResponseEntity.ok(loginResponse);
     }
 
 }

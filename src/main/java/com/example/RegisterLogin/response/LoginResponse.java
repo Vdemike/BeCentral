@@ -1,16 +1,16 @@
 package com.example.RegisterLogin.response;
 
-public class loginResponse {
+public class LoginResponse {
 
     String message;
     boolean status;
 
-    public loginResponse(String message, boolean status) {
+    public LoginResponse(String message, boolean status) {
         this.message = message;
         this.status = status;
     }
 
-    public loginResponse() {
+    public LoginResponse() {
     }
 
     public String getMessage() {
@@ -31,7 +31,7 @@ public class loginResponse {
 
     @Override
     public String toString() {
-        return "loginResponse{" +
+        return "LoginResponse{" +
                 "message='" + message + '\'' +
                 ", status=" + status +
                 '}';
