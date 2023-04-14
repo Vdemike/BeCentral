@@ -8,16 +8,16 @@ import org.springframework.data.annotation.Id;
 public class UserDTO {
 
     private int userid;
-    private String username;
-    private String userlastname;
+    private String firstName;
+    private String lastName;
     private String email;
     private String company;
     private String password;
 
-    public UserDTO(int userid, String username, String userlastname, String email, String company, String password) {
+    public UserDTO(int userid, String firstName, String lastName, String email, String company, String password) {
         this.userid = userid;
-        this.username = username;
-        this.userlastname = userlastname;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.email = email;
         this.company = company;
         this.password = password;
@@ -34,20 +34,20 @@ public class UserDTO {
         this.userid = userid;
     }
 
-    public String getUsername() {
-        return username;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getUserlastname() {
-        return userlastname;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setUserlastname(String userlastname) {
-        this.userlastname = userlastname;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getEmail() {
@@ -78,8 +78,8 @@ public class UserDTO {
     public String toString() {
         return "UserDTO{" +
                 "userid=" + userid +
-                ", username='" + username + '\'' +
-                ", userlastname='" + userlastname + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
                 ", company='" + company + '\'' +
                 ", password='" + password + '\'' +

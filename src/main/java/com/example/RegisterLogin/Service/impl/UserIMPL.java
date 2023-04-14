@@ -25,15 +25,15 @@ public class UserIMPL implements UserService {
     public String addUser(UserDTO userDTO) {
         User user = new User(
                 userDTO.getUserid(),
-                userDTO.getUsername(),
-                userDTO.getUserlastname(),
+                userDTO.getFirstName(),
+                userDTO.getLastName(),
                 userDTO.getCompany(),
                 userDTO.getEmail(),
                 this.passwordEncoder.encode(userDTO.getPassword())
         );
 
         userRepo.save(user);
-        return user.getUsername();
+        return user.getFirstName();
     }
 
     @Override

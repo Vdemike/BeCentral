@@ -21,6 +21,7 @@ public class UserController {
 
 
     @PostMapping(path = "/save")
+    @CrossOrigin(origins = "http://localhost:5173")
     public String saveUser(@Validated @RequestBody UserDTO userDTO)
     {
         String id = userService.addUser(userDTO);

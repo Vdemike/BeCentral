@@ -16,11 +16,11 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int userid;
 
-    @Column(name="user_name", length = 55)
-    private String username;
+    @Column(name="firstName", length = 55)
+    private String firstName;
 
-    @Column(name="user_lastname", length = 55)
-    private String userlastname;
+    @Column(name="lastName", length = 55)
+    private String lastName;
 
     @Column(name="email", length = 55)
     private String email;
@@ -35,10 +35,10 @@ public class User {
     public User() {
     }
 
-    public User(int userid, String username, String userlastname, String company, String email, String password) {
+    public User(int userid, String firstName, String lastName, String company, String email, String password) {
         this.userid = userid;
-        this.username = username;
-        this.userlastname = userlastname;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.email = email;
         this.company = company;
         this.password = password;
@@ -52,20 +52,20 @@ public class User {
         this.userid = userid;
     }
 
-    public String getUsername() {
-        return username;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getUserlastname() {
-        return userlastname;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setUserlastname(String userlastname) {
-        this.userlastname = userlastname;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getEmail() {
@@ -96,8 +96,8 @@ public class User {
     public String toString() {
         return "User{" +
                 "userid=" + userid +
-                ", username='" + username + '\'' +
-                ", userlastname='" + userlastname + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
                 ", company='" + company + '\'' +
                 ", password='" + password + '\'' +
