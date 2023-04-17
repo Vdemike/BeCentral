@@ -16,7 +16,7 @@ public class Comment {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int commentid;
 
-    @Column(name="comment", length = 155)
+    @Column(name="comment", length = 255)
     private String comment;
 
 
